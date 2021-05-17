@@ -2,228 +2,31 @@
 <html lang="fr">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Reservia | Accueil</title>
     <!-- feuille de styles -->
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style.css" />
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://fonts.google.com/share?selection.family=Raleway:wght@300;400;600">
+    <link rel="stylesheet" href="https://fonts.google.com/share?selection.family=Raleway:wght@300;400;600" />
     <script src="https://kit.fontawesome.com/d7247710b7.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <main>
         <!-- logo et navigation -->
-        <header class="header">
+        <header class="heading">
             <!-- logo -->
-            <a href="http://"><img itemprop="logo" src="/assets/images/logo/Reservia.svg" alt="logo de Reservia"></a>
+            <a class="heading__logo" href="http://"><img itemprop="logo" src="assets/images/logo/Reservia.svg"
+                    alt="logo de Reservia" /></a>
             <!-- liens de navigation -->
-            <ul class="header__nav-links">
-                <li>Hébergement</li>
-                <li>Activités</li>
-                <li>S'inscrire</li>
+            <ul class="heading__nav-links">
+                <li><a href="http://">Hébergement</a></li>
+                <li><a href="http://">Activités</a></li>
+                <li><a href="">S'inscrire</a></li>
             </ul>
         </header>
-
-        <section id="main">
-            <!-- recherche + filtres -->
-            <section>
-                <!-- Search bar -->
-                <form action="">
-                    <label for="search-elt">
-                        <h2>Trouvez votre hébergement pour des vacances de rêves</h2>
-                        <p>En plein centre-ville ou en pleine nature</p>
-                    </label>
-                    <div>
-                        <span><i class="fas fa-map-marker-alt"></i></span>
-                        <input type="search" name="" id="search-elt" placeholder="Marseille, France">
-                        <button type="submit"></button>
-                    </div>
-                    <div>
-                        <span>Filtres</span>
-                        <ul>
-                            <li><i class="fas fa-money-bill-wave"></i><a href="http://">Economique</a></li>
-                            <li><i class="fas fa-child"></i><a href="http://">Familial</a></li>
-                            <li><i class="fas fa-heart"></i><a href="http://">Romantique</a></li>
-                            <li><i class="fas fa-dog"></i><a href="http://">Animaux autorisés</a></li>
-                        </ul>
-                    </div>
-                    <div>
-                        <p><i class="fas fa-info"></i> Plus de 500 logements sont disponibles dans cette ville</p>
-                    </div>
-                </form>
-            </section>
-
-            <!-- Hébergement à marseille -->
-            <section id="main-articles">
-                <h3>Hébergements à Marseille</h3>
-                <!-- container des articles -->
-                <section>
-                    <article class="item-product" itemscope itemtype="https://schema.org/Product">
-                        <a href="http://"><img itemprop="image" src="" alt=""></a>
-                        <section>
-                            <h3 itemprop="name">Auberge la Canebière</h3>
-                            <p>Nuit à partir de <span itemprop="price" content="25.00">25</span><span
-                                    itemprop="priceCurrency" content="EUR">€</span></p>
-                            <span itemprop="starRating" itemscope itemtype="https://schema.org/Rating">
-                                <meta itemprop="ratingValue" content="4">*****</span>
-                        </section>
-                    </article>
-                    <article class="item-product" itemscope itemtype="https://schema.org/Product">
-                        <a href="http://"><img itemprop="image" src="" alt=""></a>
-                        <section>
-                            <h3 itemprop="name">Hôtel du port</h3>
-                            <p>Nuit à partir de <span itemprop="price" content="52.00">52</span><span
-                                    itemprop="priceCurrency" content="EUR">€</span></p>
-                            <span itemprop="starRating" itemscope itemtype="https://schema.org/Rating">
-                                <meta itemprop="ratingValue" content="5">*****</span>
-                        </section>
-                    </article>
-                    <article class="item-product" itemscope itemtype="https://schema.org/Product">
-                        <a href="http://"><img itemprop="image" src="" alt=""></a>
-                        <section>
-                            <h3 itemprop="name">Hôtel Les mouettes </h3>
-                            <p>Nuit à partir de <span itemprop="price" content="76.00">76</span><span
-                                    itemprop="priceCurrency" content="EUR">€</span></p>
-                            <span itemprop="starRating" itemscope itemtype="https://schema.org/Rating">
-                                <meta itemprop="ratingValue" content="4">*****</span>
-                        </section>
-                    </article>
-                    <article class="item-product" itemscope itemtype="https://schema.org/Product">
-                        <a href="http://"><img itemprop="image" src="" alt=""></a>
-                        <section>
-                            <h3 itemprop="name">Hôtel de la mer</h3>
-                            <p>Nuit à partir de <span itemprop="price" content="46.00">46</span><span
-                                    itemprop="priceCurrency" content="EUR">€</span></p>
-                            <span itemprop="starRating" itemscope itemtype="https://schema.org/Rating">
-                                <meta itemprop="ratingValue" content="3">*****</span>
-                        </section>
-                    </article>
-                    <article class="item-product" itemscope itemtype="https://schema.org/Product">
-                        <a href="http://"><img itemprop="image" src="" alt=""></a>
-                        <section>
-                            <h3 itemprop="name">Auberge Le Panier</h3>
-                            <p>Nuit à partir de <span itemprop="price" content="23.00">23</span><span
-                                    itemprop="priceCurrency" content="EUR">€</span></p>
-                            <span itemprop="starRating" itemscope itemtype="https://schema.org/Rating">
-                                <meta itemprop="ratingValue" content="4">*****</span>
-                        </section>
-                    </article>
-                    <article class="item-product" itemscope itemtype="https://schema.org/Product">
-                        <a href="http://"><img itemprop="image" src="" alt=""></a>
-                        <section>
-                            <h3 itemprop="name">Hôtel chez Amina</h3>
-                            <p>Nuit à partir de <span itemprop="price" content="96.00">96</span><span
-                                    itemprop="priceCurrency" content="EUR">€</span></p>
-                            <span itemprop="starRating" itemscope itemtype="https://schema.org/Rating">
-                                <meta itemprop="ratingValue" content="5">*****</span>
-                        </section>
-                    </article>
-                </section>
-                <p><a href="http://">Afficher plus</a></p>
-            </section>
-
-            <!-- Les plus populaires -->
-            <aside id="featured-articles">
-                <div>
-                    <h3>Les plus populaires</h3>
-                    <i class="fas fa-chart-line"></i>
-                </div>
-                <section>
-                    <article class="item-product" itemscope itemtype="https://schema.org/Product">
-                        <a target="_blank" href="http://"><img itemprop="image" src=""
-                                alt="Hotel Le soleil du matin"></a>
-                        <section>
-                            <h3 itemprop="name">Hotel Le soleil du matin</h3>
-                            <p>Nuit à partir de <span itemprop="price" content="128.00">128</span><span
-                                    itemprop="priceCurrency" content="EUR">€</span></p>
-                            <span itemprop="starRating" itemscope itemtype="https://schema.org/Rating">
-                                <meta itemprop="ratingValue" content="3">***</span>
-                        </section>
-                    </article>
-                    <article class="item-product" itemscope itemtype="https://schema.org/Product">
-                        <a target="_blank" href="http://"><img itemprop="image" src=""
-                                alt="Au coeur de l'eau Chambres D'hôtes"></a>
-                        <section>
-                            <h3 itemprop="name">Hotel Le soleil du matin</h3>
-                            <p>Nuit à partir de <span itemprop="price" content="71.00">71</span><span
-                                    itemprop="priceCurrency" content="EUR">€</span></p>
-                            <span itemprop="starRating" itemscope itemtype="https://schema.org/Rating">
-                                <meta itemprop="ratingValue" content="3">***</span>
-                        </section>
-                    </article>
-                    <article class="item-product" itemscope itemtype="https://schema.org/Product">
-                        <a target="_blank" href="http://"><img itemprop="image" src=""
-                                alt="Hotel Le soleil du matin"></a>
-                        <section>
-                            <h3 itemprop="name">Hôtel Tout bleu et Blanc</h3>
-                            <p>Nuit à partir de <span itemprop="price" content="68.00">68</span><span
-                                    itemprop="priceCurrency" content="EUR">€</span></p>
-                            <span itemprop="starRating" itemscope itemtype="https://schema.org/Rating">
-                                <meta itemprop="ratingValue" content="3">***</span>
-                        </section>
-                    </article>
-                </section>
-            </aside>
-
-            <!-- Activités à Marseille -->
-            <section id="activities">
-                <h3>Activités à Marseille</h3>
-                <section>
-                    <article class="item-product" itemscope itemtype="https://schema.org/Product">
-                        <a target="_blank" href="http://"><img itemprop="image" src="" alt="Vieux port"></a>
-                        <p>Vieux port</p>
-                    </article>
-                    <article class="item-product" itemscope itemtype="https://schema.org/Product">
-                        <a target="_blank" href="http://"><img itemprop="image" src="" alt="Fort de Pomègues"></a>
-                        <p>Fort de Pomègues</p>
-                    </article>
-                    <article class="item-product" itemscope itemtype="https://schema.org/Product">
-                        <a target="_blank" href="http://"><img itemprop="image" src="" alt="Iles du Frioul"></a>
-                        <p>Iles du Frioul</p>
-                    </article>
-                    <article class="item-product" itemscope itemtype="https://schema.org/Product">
-                        <a target="_blank" href="http://"><img itemprop="image" src=""
-                                alt="Parc National des Calanques"></a>
-                        <p>Parc National des Calanques</p>
-                    </article>
-                    <article class="item-product" itemscope itemtype="https://schema.org/Product">
-                        <a target="_blank" href="http://"><img itemprop="image" src="" alt="Notre-Dame-de-la-garde"></a>
-                        <p>Notre-Dame-de-la-garde</p>
-                    </article>
-                    <article class="item-product" itemscope itemtype="https://schema.org/Product">
-                        <a target="_blank" href="http://"><img itemprop="image" src="" alt="Parc Longchamp"></a>
-                        <p>Parc Longchamp</p>
-                    </article>
-                </section>
-            </section>
-            <!-- footer -->
-            <footer>
-                <div>
-                    <h4>A propos</h4>
-                    <ul>
-                        <li>Fonctionnement du site</li>
-                        <li>Conditions générales de vente</li>
-                        <li>Données et confidentialité</li>
-                    </ul>
-                </div>
-                <div>
-                    <h4>Nos Hébergements</h4>
-                    <ul>
-                        <li>Charte qualité</li>
-                        <li>Soumettre votre hotel</li>
-                    </ul>
-                </div>
-                <div>
-                    <h4>Assistance</h4>
-                    <ul>
-                        <li>Centre d'aide</li>
-                        <li>Nous contacter</li>
-                    </ul>
-                </div>
-            </footer>
     </main>
 </body>
 
