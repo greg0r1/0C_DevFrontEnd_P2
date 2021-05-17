@@ -73,7 +73,8 @@ h4 {
     max-width: 110%;
 }
 
-/* header */
+
+/* header  */
 .heading {
     display: flex;
     justify-content: space-around;
@@ -125,7 +126,6 @@ h4 {
     display: flex;
     flex-wrap: wrap;
 }
-
 
 /* "Trouvez votre hébergement pour..."  */
 .search {
@@ -308,4 +308,72 @@ h4 {
     position: relative;
     height: 100px;
     overflow: hidden;
+}
+
+/* "Les plus populaires" */
+.featured-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.featured-container {
+    padding: 10px;
+}
+
+.featured-articles {
+    width: 30%;
+    margin: 0 auto;
+}
+
+.featured-articles__title {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.featured-articles__title i {
+    color: initial;
+}
+
+.item-featured {
+    display: flex;
+    min-width: 300px;
+    max-height: 150px;
+}
+
+.item-featured a {
+    position: relative;
+    overflow: hidden;
+    width: 150px;
+}
+
+.item-featured a img {
+    height: 100%;
+    width: auto;
+}
+
+.featured-infos {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    padding: 0 10px;
+}
+
+.featured-infos h4,
+.featured-infos p {
+    margin: 5px auto;
+}
+
+.featured__stars {
+    margin: 40px 0 5px;
+}
+
+.item-featured:last-child img {
+    width: 100%;
+    height: auto;
+    top: -40%;
 }
