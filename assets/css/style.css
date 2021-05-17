@@ -47,7 +47,34 @@ h4 {
     font-size: 14px;
 }
 
-* header */ .heading {
+/* éléments communs de sections  */
+.main-articles,
+.featured-articles {
+    margin: 0 auto;
+    padding: 30px;
+    border-radius: 10px;
+    background: #F2F2F2;
+}
+
+.item-product,
+.item-featured {
+    width: 30%;
+    height: max-content;
+    border: solid 5px #fff;
+    margin: 10px 0;
+    overflow: hidden;
+    border-radius: 20px;
+    background: #fff;
+}
+
+.item-product a img,
+.item-featured a img {
+    position: absolute;
+    max-width: 110%;
+}
+
+/* header */
+.heading {
     display: flex;
     justify-content: space-around;
     margin: 0 auto;
@@ -98,6 +125,7 @@ h4 {
     display: flex;
     flex-wrap: wrap;
 }
+
 
 /* "Trouvez votre hébergement pour..."  */
 .search {
@@ -238,4 +266,46 @@ h4 {
     align-self: center;
     justify-self: center;
     margin: auto;
+}
+
+/* "Hébergements" */
+.main-articles {
+    width: 65%;
+}
+
+
+.main-articles>div {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: space-between;
+}
+
+.articles-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: auto;
+    justify-content: space-between;
+}
+
+.hebergmt-infos {
+    padding: 0 10px;
+    height: max-content;
+}
+
+.hebergmt-infos>* {
+    margin: 10px 0;
+}
+
+.hebergmt-infos span {
+    font-weight: 600;
+}
+
+.item-product a {
+    display: flex;
+    align-items: center;
+    position: relative;
+    height: 100px;
+    overflow: hidden;
 }
