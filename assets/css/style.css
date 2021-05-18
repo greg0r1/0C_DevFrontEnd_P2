@@ -48,6 +48,11 @@ h4 {
 }
 
 /* éléments communs de sections  */
+.heading,
+.activities {
+    padding: 20px;
+}
+
 .main-articles,
 .featured-articles {
     margin: 0 auto;
@@ -65,12 +70,25 @@ h4 {
     overflow: hidden;
     border-radius: 20px;
     background: #fff;
+    box-shadow: 0px 9px 10px -9px rgb(171 171 171);
 }
 
-.item-product a img,
-.item-featured a img {
-    position: absolute;
-    max-width: 110%;
+main {
+    max-width: 1200px;
+    margin: auto;
+}
+
+#main {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.main-articles>div,
+.activities>div {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: space-between;
 }
 
 
@@ -112,19 +130,6 @@ h4 {
 .heading__nav-links li:last-child {
     font-weight: 600;
     color: #0065FC;
-}
-
-/* Container de la section search + hébergement + activités */
-
-#main,
-.heading {
-    max-width: 1200px;
-    margin: auto;
-}
-
-#main {
-    display: flex;
-    flex-wrap: wrap;
 }
 
 /* "Trouvez votre hébergement pour..."  */
@@ -273,14 +278,6 @@ h4 {
     width: 65%;
 }
 
-
-.main-articles>div {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    align-content: space-between;
-}
-
 .articles-container {
     display: flex;
     flex-wrap: wrap;
@@ -302,12 +299,17 @@ h4 {
     font-weight: 600;
 }
 
-.item-product a {
-    display: flex;
-    align-items: center;
-    position: relative;
-    height: 100px;
+.item-product a>div {
     overflow: hidden;
+    height: 110px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item-product a img {
+    width: 100%;
+    height: auto;
 }
 
 /* "Les plus populaires" */
@@ -341,26 +343,37 @@ h4 {
 .item-featured {
     display: flex;
     min-width: 300px;
-    max-height: 150px;
+    height: 130px;
 }
 
-.item-featured a {
-    position: relative;
+.item-featured a>div {
     overflow: hidden;
     width: 150px;
-}
-
-.item-featured a img {
     height: 100%;
-    width: auto;
 }
 
 .featured-infos {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     align-items: flex-start;
     width: 100%;
     padding: 0 10px;
+}
+
+article.item-featured>a {
+    display: flex;
+}
+
+article.item-featured:last-child a>div {
+    height: 100%;
+}
+
+.item-featured:first-child a>div img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
 }
 
 .featured-infos h4,
@@ -376,4 +389,104 @@ h4 {
     width: 100%;
     height: auto;
     top: -40%;
+}
+
+/* "Activités à Marseille"  */
+.activities {
+    width: 100%;
+    margin: 30px 0;
+}
+
+.activities article.item-product h4 {
+    padding: 0 20px;
+}
+
+.activities>div {
+    width: 100%;
+    margin: auto;
+    display: block;
+}
+
+.activities-container__1col,
+.activities-container__2cols {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+    width: 25%;
+}
+
+
+.activities-container__2cols article a,
+.activities-container__1col article a {
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.activities-container__2cols article a div,
+.activities-container__1col article a div {
+    flex-direction: column;
+    height: 100%;
+    width: auto;
+}
+
+.activities-container__2cols article a img {
+    width: 100%;
+    height: auto;
+}
+
+.activities-container__1col article a img {
+    height: 100%;
+    width: auto;
+}
+
+.activities-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.activities-container__2cols .item-product:first-child {
+    margin-bottom: 50px;
+}
+
+.activities-container__1col .item-product,
+.activities-container__2cols .item-product {
+    display: flex;
+    margin: 0 10px;
+    width: auto;
+    border: hidden;
+}
+
+/* Footer */
+.footer {
+    width: 100%;
+    background: #f2f2f2;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 10px 20px;
+    max-width: 900px;
+}
+
+.footer__elt {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    padding: 0 50px 0 0;
+}
+
+.footer__elt ul {
+    margin: auto;
+    padding: 0;
+}
+
+.footer__elt ul li {
+    margin: auto;
+    padding: 0 0 2px 0;
 }
