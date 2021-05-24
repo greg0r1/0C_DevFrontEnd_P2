@@ -51,14 +51,13 @@ h4 {
 
 .main-articles,
 .featured-articles {
-    padding: 30px;
+    padding: 20px;
     border-radius: 10px;
     background: #F2F2F2;
 }
 
 .item-product,
 .item-featured {
-    width: 30%;
     height: max-content;
     border: solid 5px #fff;
     margin: 10px 0;
@@ -79,6 +78,11 @@ main {
     justify-content: space-between;
 }
 
+.heading,
+#main {
+    padding: 0 20px;
+}
+
 .main-articles>div,
 .activities>div {
     display: flex;
@@ -91,9 +95,9 @@ main {
 /* header  */
 .heading {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     margin: 0 auto;
-    padding: 0;
 }
 
 .heading__logo {
@@ -103,9 +107,14 @@ main {
 
 .heading__nav-links {
     display: flex;
+    flex-wrap: wrap;
     margin: 0px;
 }
 
+.heading__nav-links li {
+    display: flex;
+    align-items: flex-end;
+}
 
 .heading__nav-links li a {
     display: block;
@@ -132,6 +141,11 @@ main {
     margin: 30px 0;
 }
 
+.searching {
+    display: flex;
+    flex-direction: column;
+}
+
 .searching__title * {
     margin: auto;
 }
@@ -148,7 +162,8 @@ main {
     background: #F2F2F2;
 }
 
-.searching__input input {
+.search-elt {
+    -webkit-appearance: none;
     border-top: solid 1px #F2F2F2;
     border-bottom: solid 1px #F2F2F2;
 }
@@ -175,6 +190,7 @@ main {
 .searching__filter ul {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .searching__title,
@@ -186,7 +202,7 @@ main {
 .searching__filter {
     align-items: center;
     font-weight: 600;
-    margin: 0;
+    margin: auto;
 }
 
 .searching__filter p {
@@ -200,7 +216,6 @@ main {
 
 .searching__filter ul li {
     display: flex;
-    margin: auto;
 }
 
 .searching__filter ul li a {
@@ -269,9 +284,6 @@ main {
 }
 
 /* "Hébergements" */
-.main-articles {
-    width: 65%;
-}
 
 .articles-container {
     display: flex;
@@ -294,6 +306,10 @@ main {
     font-weight: 600;
 }
 
+.item-product {
+    width: 30%;
+}
+
 .item-product a>div {
     overflow: hidden;
     height: 110px;
@@ -310,17 +326,17 @@ main {
 /* "Les plus populaires" */
 .featured-container {
     width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.featured-articles>div {
     display: flex;
     flex-direction: column;
-    align-items: center;
-}
-
-.featured-container {
-    padding: 10px;
-}
-
-.featured-articles {
-    width: 30%;
+    height: 100%;
 }
 
 .featured-articles__title {
@@ -336,11 +352,12 @@ main {
 
 .item-featured {
     display: flex;
-    min-width: 300px;
     height: 130px;
 }
 
 .item-featured a>div {
+    display: flex;
+    justify-content: center;
     overflow: hidden;
     width: 150px;
     height: 100%;
@@ -353,6 +370,7 @@ main {
     align-items: flex-start;
     width: 100%;
     padding: 0 10px;
+    margin: 0;
 }
 
 article.item-featured>a {
@@ -382,13 +400,11 @@ article.item-featured:last-child a>div {
 .item-featured:last-child img {
     width: 100%;
     height: auto;
-    top: -40%;
 }
 
 /* "Activités à Marseille"  */
 .activities {
     width: 100%;
-    margin: 40px 0;
 }
 
 .activities article.item-product h4 {
@@ -470,11 +486,306 @@ article.item-featured:last-child a>div {
 }
 
 .footer__elt ul {
-    margin: auto;
+    margin: 0;
     padding: 0;
 }
 
 .footer__elt ul li {
     margin: auto;
     padding: 0 0 2px 0;
+}
+
+@media only screen and (max-width: 600px) {
+
+    h1,
+    h2,
+    h3,
+    h4 {
+        font-size: 1.8em;
+    }
+
+    .searching__filter--round-corner+span,
+    .searching__info--round-corner+span,
+    .fa-info::before,
+    .footer__elt ul li,
+    .heading__nav-links {
+        font-size: 1.3em;
+        ;
+    }
+
+    .articles-container+p a {
+        font-weight: 600;
+        font-size: larger;
+    }
+
+    p {
+        font-size: 1.2em;
+    }
+
+    body {
+        padding: 0;
+    }
+
+    .main-articles,
+    .activities {
+        width: auto;
+        background: none;
+        padding: 20px;
+    }
+
+
+    .featured-articles {
+        width: auto;
+    }
+
+    .featured-container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .searching__filter ul li {
+        display: flex;
+        margin: 0;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+
+    .searching__filter ul {
+        padding: 0;
+        flex-wrap: wrap;
+    }
+
+    .searching__info--round-corner {
+        border-radius: 50%;
+        width: 40px;
+        height: 35px;
+    }
+
+    a.heading__logo {
+        position: absolute;
+        top: 15px;
+        left: 15PX;
+    }
+
+    .heading__nav-links {
+        padding: 0;
+        justify-content: space-between;
+        margin: 60px 0 0;
+        width: 100%;
+    }
+
+    .heading__nav-links li:first-child {
+        border-top: unset;
+        border-bottom: solid 2px;
+        border-bottom-color: #0065fc;
+        flex: 1;
+    }
+
+    .heading__nav-links li:nth-child(2) {
+        border-bottom: solid 2px;
+        border-bottom-color: #F2F2F2;
+        flex: 1;
+    }
+
+    .heading__nav-links li a {
+        padding: 25px 20px 10px;
+        margin: auto;
+    }
+
+    .heading__nav-links li:nth-child(3) {
+        position: absolute;
+        top: 5px;
+        right: 10px;
+    }
+
+    .search {
+        padding: 20px;
+    }
+
+    .searching__input {
+        justify-content: space-between;
+        border: solid .5px #F2F2F2;
+        margin: auto;
+        height: 50px;
+        max-width: 400px;
+    }
+
+    .searching__input span {
+        display: flex;
+    }
+
+    .searching__input span i {
+        margin: auto;
+    }
+
+    .searching__input input {
+        flex: 1;
+        border: unset;
+    }
+
+    .searching__input button {
+        font-size: 0;
+        border-radius: 10px;
+    }
+
+    .fa-map-marker-alt:before {
+        padding: 5px;
+    }
+
+    .searching__input button::after {
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        content: "\f002";
+        font-size: initial;
+        padding: 10px
+    }
+
+    .searching__filter {
+        flex-wrap: wrap;
+        margin: 20px 0;
+    }
+
+    .searching__filter ul li a {
+        margin: 10px 5px 10px 0;
+    }
+
+    .searching__filter p {
+        margin: 0;
+    }
+
+    input.search-elt::placeholder {
+        padding: 10px;
+    }
+
+    .featured-articles {
+        order: 0;
+    }
+
+    .featured-container {
+        padding: unset;
+    }
+
+    .main-articles {
+        order: 3
+    }
+
+    .activities {
+        order: 4;
+    }
+
+    article.item-featured {
+        width: 100%;
+    }
+
+    article.item-product {
+        width: unset;
+    }
+
+    article.item-product {
+        width: unset;
+    }
+
+    .activities-container {
+        flex-direction: column;
+    }
+
+    .activities-container__1col article a img,
+    .activities-container__2cols article a img {
+        width: 100%;
+        height: auto;
+    }
+
+    .activities-container__1col .item-product,
+    .activities-container__2cols .item-product {
+        height: 200px;
+        ;
+    }
+
+    .activities-container__1col,
+    .activities-container__2cols {
+        width: unset;
+    }
+
+    .activities-container__1col,
+    .activities-container__2cols {
+        height: unset;
+    }
+
+    .footer-container {
+        flex-direction: column;
+    }
+
+}
+
+@media only screen and (min-width: 600px) and (max-width: 1024px) {
+
+    .main-articles {
+        width: auto;
+    }
+
+    .featured-articles {
+        width: auto;
+        margin: 10px auto;
+    }
+
+    .featured-articles>div {
+        height: 100%;
+        flex-wrap: nowrap;
+    }
+
+    aside .item-featured {
+        min-width: unset;
+        width: 48%;
+    }
+
+    .activities {
+        margin-bottom: 20px;
+    }
+
+    .activities-container {
+        flex-wrap: wrap;
+    }
+
+    .activities-container__1col,
+    .activities-container__2cols {
+        width: 48%;
+    }
+
+    .activities-container__1col:last-child {
+        order: 4;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .main-articles {
+        width: 70%;
+    }
+
+    .search-elt {
+        min-width: 200px;
+    }
+
+    .featured-articles {
+        width: 27%;
+    }
+
+    .item-featured {
+        min-width: 100%;
+    }
+
+    .featured-container {
+        width: 100%;
+    }
+
+    aside .item-featured {
+        width: 100%;
+    }
+
+    .featured-container {
+        flex-direction: column;
+    }
+
+    .activities {
+        margin: 40px 0;
+    }
 }
