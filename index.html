@@ -9,32 +9,39 @@
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="stylesheet" href="https://fonts.google.com/share?selection.family=Raleway:wght@300;400;600" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
-        integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+        integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous" />
 </head>
 
 <body>
     <main>
-        <header class="heading ">
-            <a class="heading__logo" href="#"><img itemprop="logo" src="assets/img/logo/Reservia.svg"
-                    alt="logo de Reservia" /></a>
+        <header class="heading">
+            <a class="heading__logo" href="#"><img src="assets/img/logo/Reservia.svg" alt="logo de Reservia" /></a>
             <ul class="heading__nav-links">
-                <li><a href="#">Hébergement</a></li>
-                <li><a href="#">Activités</a></li>
-                <li><a href="">S'inscrire</a></li>
+                <li>
+                    <a href="#">Hébergement</a>
+                </li>
+                <li>
+                    <a href="#">Activités</a>
+                </li>
+                <li>
+                    <a href="">S'inscrire</a>
+                </li>
             </ul>
         </header>
 
         <section id="main">
-            <!-- recherche + filters -->
-            <section class="search">
+            <!-- recherche + filtre -->
+            <section id="search" class="search">
                 <!-- Search bar -->
-                <form class="searching" action="">
+                <form class="searching" action="https://greg0r1.github.io/0C_DevFrontEnd_P2/" method="get">
                     <labet class="searching__title" for="search-elt">
                         <h2>Trouvez votre hébergement pour des vacances de rêves</h2>
                         <p>En plein centre-ville ou en pleine nature</p>
                     </labet>
                     <div class="searching__input">
-                        <span><i class="fas fa-map-marker-alt"></i></span>
+                        <span>
+                            <i class="fas fa-map-marker-alt"></i>
+                        </span>
                         <input type="search" name="search-elt" class="search-elt" placeholder="Marseille, France" />
                         <button type="submit">Rechercher</button>
                     </div>
@@ -80,330 +87,410 @@
                             <div class="searching__info--round-corner">
                                 <i class="fas fa-info"></i>
                             </div>
-                            <span>Plus de 500 logements sont disponibles dans
-                                cette ville</span>
+                            <span>Plus de 500 logements sont disponibles dans cette ville</span>
                         </div>
                     </div>
                 </form>
             </section>
 
             <!-- Hébergement à marseille -->
-            <section id="articles" class="main-articles">
+            <section id="lodging" class="lodging-articles">
                 <div>
                     <h3>Hébergements à Marseille</h3>
                     <!-- container des articles -->
-                    <section class="articles-container">
-                        <article class="item-product" itemscope itemtype="https://schema.org/Product">
+                    <section class="lodging-items">
+                        <article class="lodging-item" itemscope="itemscope" itemtype="https://schema.org/Product">
                             <a href="#">
-                                <div><img itemprop="image"
+                                <div>
+                                    <img itemprop="image"
                                         src="assets/img/hebergements/4_small/marcus-loke-WQJvWU_HZFo-unsplash.jpg"
-                                        alt="" /></div>
-                                <section class="hebergmt-infos">
-                                    <h4 itemprop="name">Auberge la Canebière</h4>
+                                        alt="Auberge la Canebière" />
+                                </div>
+                                <div class="lodging-infos">
+                                    <header>
+                                        <h4 itemprop="name">Auberge la Canebière</h4>
+                                    </header>
                                     <p>
                                         Nuit à partir de
                                         <span itemprop="price" content="25.00">25</span><span itemprop="priceCurrency"
                                             content="EUR">€</span>
                                     </p>
-                                    <div itemprop="starRating" itemscope itemtype="https://schema.org/Rating">
-                                        <meta itemprop="ratingValue" content="4" />
-                                        <div class="hebergmt-infos__stars">
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i style="color:#F2F2F2;" class="fas fa-star"></i>
+                                    <footer>
+                                        <div itemprop="starRating" itemscope="itemscope"
+                                            itemtype="https://schema.org/Rating">
+                                            <meta itemprop="ratingValue" content="4" />
+                                            <div class="lodging-infos__stars">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i style="color: #f2f2f2" class="fas fa-star"></i>
+                                            </div>
                                         </div>
-                                    </div>
-                                </section>
+                                    </footer>
+                                </div>
                             </a>
                         </article>
-                        <article class="item-product" itemscope itemtype="https://schema.org/Product">
+                        <article class="lodging-item" itemscope="itemscope" itemtype="https://schema.org/Product">
                             <a href="#">
-                                <div><img itemprop="image"
+                                <div>
+                                    <img itemprop="image"
                                         src="assets/img/hebergements/4_small/fred-kleber-gTbaxaVLvsg-unsplash.jpg"
-                                        alt="" /></div>
-                                <section class="hebergmt-infos">
-                                    <h4 itemprop="name">Hôtel du port</h4>
+                                        alt="Hôtel du port" />
+                                </div>
+                                <div class="lodging-infos">
+                                    <header>
+                                        <h4 itemprop="name">Hôtel du port</h4>
+                                    </header>
                                     <p>
                                         Nuit à partir de
                                         <span itemprop="price" content="52.00">52</span><span itemprop="priceCurrency"
                                             content="EUR">€</span>
                                     </p>
-                                    <div class="hebergmt-infos__stars" itemprop="starRating" itemscope
-                                        itemtype="https://schema.org/Rating">
-                                        <meta itemprop="ratingValue" content="4" />
-                                        <div>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
+                                    <footer>
+                                        <div itemprop="starRating" itemscope="itemscope"
+                                            itemtype="https://schema.org/Rating">
+                                            <meta itemprop="ratingValue" content="4" />
+                                            <div class="lodging-infos__stars">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
                                         </div>
-                                    </div>
-                                </section>
+                                    </footer>
+                                </div>
                             </a>
                         </article>
-                        <article class="item-product" itemscope itemtype="https://schema.org/Product">
+                        <article class="lodging-item" itemscope="itemscope" itemtype="https://schema.org/Product">
                             <a href="#">
-                                <div><img itemprop="image"
+                                <div>
+                                    <img itemprop="image"
                                         src="assets/img/hebergements/4_small/reisetopia-B8WIgxA_PFU-unsplash.jpg"
-                                        alt="" /></div>
-                                <section class="hebergmt-infos">
-                                    <h4 itemprop="name">Hôtel Les mouettes</h4>
+                                        alt="Hôtel Les mouettes" />
+                                </div>
+                                <div class="lodging-infos">
+                                    <header>
+                                        <h4 itemprop="name">Hôtel Les mouettes</h4>
+                                    </header>
                                     <p>
                                         Nuit à partir de
                                         <span itemprop="price" content="76.00">76</span><span itemprop="priceCurrency"
                                             content="EUR">€</span>
                                     </p>
-                                    <div class="hebergmt-infos__stars" itemprop="starRating" itemscope
-                                        itemtype="https://schema.org/Rating">
-                                        <meta itemprop="ratingValue" content="4" />
-                                        <div>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i style="color: #F2F2F2;" class="fas fa-star"></i>
+                                    <footer>
+                                        <div itemprop="starRating" itemscope="itemscope"
+                                            itemtype="https://schema.org/Rating">
+                                            <meta itemprop="ratingValue" content="4" />
+                                            <div class="lodging-infos__stars">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i style="color: #f2f2f2" class="fas fa-star"></i>
+                                            </div>
                                         </div>
-                                    </div>
-                                </section>
+                                    </footer>
+                                </div>
                             </a>
                         </article>
-                        <article class="item-product" itemscope itemtype="https://schema.org/Product">
+                        <article class="lodging-item" itemscope="itemscope" itemtype="https://schema.org/Product">
                             <a href="#">
-                                <div><img itemprop="image"
+                                <div>
+                                    <img itemprop="image"
                                         src="assets/img/hebergements/4_small/annie-spratt-Eg1qcIitAuA-unsplash.jpg"
-                                        alt="" /></div>
-                                <section class="hebergmt-infos">
-                                    <h4 itemprop="name">Hôtel de la mer</h4>
+                                        alt="Hôtel de la mer" />
+                                </div>
+                                <div class="lodging-infos">
+                                    <header>
+                                        <h4 itemprop="name">Hôtel de la mer</h4>
+                                    </header>
                                     <p>
                                         Nuit à partir de
                                         <span itemprop="price" content="46.00">46</span><span itemprop="priceCurrency"
                                             content="EUR">€</span>
                                     </p>
-                                    <div class="hebergmt-infos__stars" itemprop="starRating" itemscope
-                                        itemtype="https://schema.org/Rating">
-                                        <meta itemprop="ratingValue" content="4" />
-                                        <div class="hebergmt-infos__stars">
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i style="color:#F2F2F2;" class="fas fa-star"></i>
-                                            <i style="color:#F2F2F2;" class="fas fa-star"></i>
+                                    <footer>
+                                        <div itemprop="starRating" itemscope="itemscope"
+                                            itemtype="https://schema.org/Rating">
+                                            <meta itemprop="ratingValue" content="4" />
+                                            <div class="lodging-infos__stars">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i style="color: #f2f2f2" class="fas fa-star"></i>
+                                                <i style="color: #f2f2f2" class="fas fa-star"></i>
+                                            </div>
                                         </div>
-                                    </div>
-                                </section>
+                                    </footer>
+                                </div>
                             </a>
                         </article>
-                        <article class="item-product" itemscope itemtype="https://schema.org/Product">
+                        <article class="lodging-item" itemscope="itemscope" itemtype="https://schema.org/Product">
                             <a href="#">
-                                <div><img itemprop="image"
+                                <div>
+                                    <img itemprop="image"
                                         src="assets/img/hebergements/4_small/nicate-lee-kT-ZyaiwBe0-unsplash.jpg"
-                                        alt="" /></div>
-                                <section class="hebergmt-infos">
-                                    <h4 itemprop="name">Auberge Le Panier</h4>
+                                        alt="Auberge Le Panier" />
+                                </div>
+                                <div class="lodging-infos">
+                                    <header>
+                                        <h4 itemprop="name">Auberge Le Panier</h4>
+                                    </header>
                                     <p>
                                         Nuit à partir de
                                         <span itemprop="price" content="23.00">23</span><span itemprop="priceCurrency"
                                             content="EUR">€</span>
                                     </p>
-                                    <div class="hebergmt-infos__stars" itemprop="starRating" itemscope
-                                        itemtype="https://schema.org/Rating">
-                                        <meta itemprop="ratingValue" content="4" />
-                                        <div class="hebergmt-infos__stars">
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i style="color:#F2F2F2;" class="fas fa-star"></i>
+                                    <footer>
+                                        <div itemprop="starRating" itemscope="itemscope"
+                                            itemtype="https://schema.org/Rating">
+                                            <meta itemprop="ratingValue" content="4" />
+                                            <div class="lodging-infos__stars">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i style="color: #f2f2f2" class="fas fa-star"></i>
+                                            </div>
                                         </div>
-                                    </div>
-                                </section>
+                                    </footer>
+                                </div>
                             </a>
                         </article>
-                        <article class="item-product" itemscope itemtype="https://schema.org/Product">
+                        <article class="lodging-item" itemscope="itemscope" itemtype="https://schema.org/Product">
                             <a href="#">
-                                <div><img itemprop="image"
+                                <div>
+                                    <img itemprop="image"
                                         src="assets/img/hebergements/4_small/febrian-zakaria-sjvU0THccQA-unsplash.jpg"
-                                        alt="" /></div>
-                                <section class="hebergmt-infos">
-                                    <h4 itemprop="name">Hôtel chez Amina</h4>
+                                        alt="Hôtel chez Amina" />
+                                </div>
+                                <div class="lodging-infos">
+                                    <header>
+                                        <h4 itemprop="name">Hôtel chez Amina</h4>
+                                    </header>
                                     <p>
                                         Nuit à partir de
                                         <span itemprop="price" content="25.00">25</span><span itemprop="priceCurrency"
                                             content="EUR">€</span>
                                     </p>
-                                    <div class="hebergmt-infos__stars" itemprop="starRating" itemscope
-                                        itemtype="https://schema.org/Rating">
-                                        <meta itemprop="ratingValue" content="4" />
-                                        <div class="hebergmt-infos__stars">
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                        </div>
-                                    </div>
-                                </section>
+                                    <footer>
+                                        <divitemprop="starRating" itemscope="itemscope"
+                                            itemtype="https://schema.org/Rating">
+                                            <meta itemprop="ratingValue" content="4" />
+                                            <div class="lodging-infos__stars">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                    </footer>
+                                </div>
                             </a>
                         </article>
                     </section>
-                    <p><a href="#activities">Afficher plus</a></p>
+                    <p>
+                        <a href="#activities">Afficher plus</a>
+                    </p>
                 </div>
             </section>
 
             <!-- Les plus populaires -->
-            <aside id="featured" class="featured-articles">
+            <aside id="popular-items" class="popular-items">
                 <div>
-                    <div class="featured-articles__title">
+                    <div class="popular-items__title">
                         <h3>Les plus populaires</h3>
                         <i class="fas fa-chart-line"></i>
                     </div>
-                    <section class="featured-container">
-                        <article class="item-featured" itemscope itemtype="https://schema.org/Product">
+                    <section class="popular-items__container">
+                        <article class="item-featured" itemscope="itemscope" itemtype="https://schema.org/Product">
                             <a href="#">
-                                <div><img itemprop="image"
+                                <div>
+                                    <img itemprop="image"
                                         src="assets/img/hebergements/4_small/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg"
-                                        alt="" /></div>
-                                <section class="featured-infos">
+                                        alt="Hotel Le soleil du matin" />
+                                </div>
+                                <div class="featured-infos">
                                     <div>
-                                        <h4 itemprop="name">Hotel Le soleil du matin</h4>
+                                        <header>
+                                            <h4 itemprop="name">Hotel Le soleil du matin</h4>
+                                        </header>
                                         <p>
                                             Nuit à partir de
-                                            <strong><span itemprop="price" content="128.00">128</span><span
+                                            <strong>
+                                                <span itemprop="price" content="128.00">128</span><span
                                                     itemprop="priceCurrency" content="EUR">€</span></strong>
                                         </p>
                                     </div>
-                                    <div itemprop="starRating" itemscope itemtype="https://schema.org/Rating">
-                                        <meta itemprop="ratingValue" content="4" />
-                                        <div class="featured__stars">
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
+                                    <footer>
+                                        <div itemprop="starRating" itemscope="itemscope"
+                                            itemtype="https://schema.org/Rating">
+                                            <meta itemprop="ratingValue" content="4" />
+                                            <div class="featured__stars">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
                                         </div>
-                                    </div>
-                                </section>
+                                    </footer>
+                                </div>
                             </a>
                         </article>
-                        <article class="item-featured" itemscope itemtype="https://schema.org/Product">
+                        <article class="item-featured" itemscope="itemscope" itemtype="https://schema.org/Product">
                             <a href="#">
-                                <div><img itemprop="image"
+                                <div>
+                                    <img itemprop="image"
                                         src="assets/img/hebergements/4_small/aw-creative-VGs8z60yT2c-unsplash.jpg"
-                                        alt="" /></div>
-                                <section class="featured-infos">
+                                        alt="Au coeur de l'eau Chambres d'hôtes" />
+                                </div>
+                                <div class="featured-infos">
                                     <div>
-                                        <h4 itemprop="name">Au coeur de l'eau Chambres d'hôtes</h4>
+                                        <header>
+                                            <h4 itemprop="name">
+                                                Au coeur de l'eau Chambres d'hôtes
+                                            </h4>
+                                        </header>
                                         <p>
                                             Nuit à partir de
-                                            <strong><span itemprop="price" content="71.00">71</span><span
+                                            <strong>
+                                                <span itemprop="price" content="71.00">71</span><span
                                                     itemprop="priceCurrency" content="EUR">€</span></strong>
                                         </p>
                                     </div>
-                                    <div itemprop="starRating" itemscope itemtype="https://schema.org/Rating">
-                                        <meta itemprop="ratingValue" content="4" />
-                                        <div class="featured__stars">
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i style="color:#F2F2F2;" class="fas fa-star"></i>
+                                    <footer>
+                                        <div itemprop="starRating" itemscope="itemscope"
+                                            itemtype="https://schema.org/Rating">
+                                            <meta itemprop="ratingValue" content="4" />
+                                            <div class="featured__stars">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i style="color: #f2f2f2" class="fas fa-star"></i>
+                                            </div>
                                         </div>
-                                    </div>
-                                </section>
+                                    </footer>
+                                </div>
                             </a>
                         </article>
-                        <article class="item-featured" itemscope itemtype="https://schema.org/Product">
+                        <article class="item-featured" itemscope="itemscope" itemtype="https://schema.org/Product">
                             <a href="#">
-                                <div><img itemprop="image"
+                                <div>
+                                    <img itemprop="image"
                                         src="assets/img/hebergements/4_small/febrian-zakaria-sjvU0THccQA-unsplash.jpg"
-                                        alt="" /></div>
-                                <section class="featured-infos">
+                                        alt="Hôtel Tout bleu et Blanc" />
+                                </div>
+                                <div class="featured-infos">
                                     <div>
-                                        <h4 itemprop="name">Hôtel Tout bleu et Blanc</h4>
+                                        <header>
+                                            <h4 itemprop="name">Hôtel Tout bleu et Blanc</h4>
+                                        </header>
                                         <p>
                                             Nuit à partir de
-                                            <strong><span itemprop="price" content="68.00">68</span><span
+                                            <strong>
+                                                <span itemprop="price" content="68.00">68</span><span
                                                     itemprop="priceCurrency" content="EUR">€</span></strong>
                                         </p>
                                     </div>
-                                    <div itemprop="starRating" itemscope itemtype="https://schema.org/Rating">
-                                        <meta itemprop="ratingValue" content="4" />
-                                        <div class="featured__stars">
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i style="color:#F2F2F2;" class="fas fa-star"></i>
+                                    <footer>
+                                        <div itemprop="starRating" itemscope="itemscope"
+                                            itemtype="https://schema.org/Rating">
+                                            <meta itemprop="ratingValue" content="4" />
+                                            <div class="featured__stars">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i style="color: #f2f2f2" class="fas fa-star"></i>
+                                            </div>
                                         </div>
-                                    </div>
-                                </section>
+                                    </footer>
+                                </div>
                             </a>
                         </article>
                     </section>
-
                 </div>
             </aside>
 
             <!-- Activités à Marseille -->
-            <section class="activities">
+            <section id="activities" class="activities">
                 <div>
                     <h3>Activités à Marseille</h3>
-                    <section class="activities-container">
-                        <div class="activities-container__1col">
-                            <article class="item-product" itemscope itemtype="https://schema.org/Product">
+                    <section class="activities-items">
+                        <div class="activities-items--1col">
+                            <article class="activities-items__item" itemscope="itemscope"
+                                itemtype="https://schema.org/Product">
                                 <a target="_blank" href="#">
-                                    <div><img itemprop="image"
+                                    <div>
+                                        <img itemprop="image"
                                             src="assets/img/activites/4_small/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg"
-                                            alt="Vieux port" /></div>
+                                            alt="Vieux port" />
+                                    </div>
                                     <h4>Vieux port</h4>
                                 </a>
                             </article>
                         </div>
-                        <div class="activities-container__2cols">
-                            <article class="item-product" itemscope itemtype="https://schema.org/Product">
+                        <div class="activities-items--2cols">
+                            <article class="activities-items__item" itemscope="itemscope"
+                                itemtype="https://schema.org/Product">
                                 <a target="_blank" href="#">
-                                    <div><img itemprop="image"
+                                    <div>
+                                        <img itemprop="image"
                                             src="assets/img/activites/4_small/paul-hermann-QFTrLdQIRhI-unsplash.jpg"
-                                            alt="Fort de Pomègues" /></div>
+                                            alt="Fort de Pomègues" />
+                                    </div>
                                     <h4>Fort de Pomègues</h4>
                                 </a>
                             </article>
-                            <article class="item-product" itemscope itemtype="https://schema.org/Product">
+                            <article class="activities-items__item" itemscope="itemscope"
+                                itemtype="https://schema.org/Product">
                                 <a target="_blank" href="#">
-                                    <div><img itemprop="image"
+                                    <div>
+                                        <img itemprop="image"
                                             src="assets/img/activites/4_small/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg"
-                                            alt="Iles du Frioul" /></div>
+                                            alt="Iles du Frioul" />
+                                    </div>
                                     <h4>Iles du Frioul</h4>
                                 </a>
                             </article>
                         </div>
-                        <div class="activities-container__1col">
-                            <article class="item-product" itemscope itemtype="https://schema.org/Product">
+                        <div class="activities-items--1col">
+                            <article class="activities-items__item" itemscope="itemscope"
+                                itemtype="https://schema.org/Product">
                                 <a target="_blank" href="#">
-                                    <div><img itemprop="image"
+                                    <div>
+                                        <img itemprop="image"
                                             src="assets/img/activites/4_small/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg"
-                                            alt="Parc National des Calanques" /></div>
+                                            alt="Parc National des Calanques" />
+                                    </div>
                                     <h4>Parc National des Calanques</h4>
                                 </a>
                             </article>
                         </div>
-                        <div class="activities-container__2cols">
-                            <article class="item-product" itemscope itemtype="https://schema.org/Product">
+                        <div class="activities-items--2cols">
+                            <article class="activities-items__item" itemscope="itemscope"
+                                itemtype="https://schema.org/Product">
                                 <a target="_blank" href="#">
-                                    <div><img itemprop="image"
+                                    <div>
+                                        <img itemprop="image"
                                             src="assets/img/activites/4_small/florian-wehde-xW9e8gdotxI-unsplash.jpg"
-                                            alt="Notre-Dame-de-la-garde" /></div>
+                                            alt="Notre-Dame-de-la-garde" />
+                                    </div>
                                     <h4>Notre-Dame-de-la-garde</h4>
                                 </a>
                             </article>
-                            <article class="item-product" itemscope itemtype="https://schema.org/Product">
+                            <article class="activities-items__item" itemscope="itemscope"
+                                itemtype="https://schema.org/Product">
                                 <a target="_blank" href="#">
-                                    <div><img itemprop="image"
+                                    <div>
+                                        <img itemprop="image"
                                             src="assets/img/activites/4_small/lena-paulin-wH2-EJoDcV0-unsplash.jpg"
-                                            alt="Parc Longchamp" /></div>
+                                            alt="Parc Longchamp" />
+                                    </div>
                                     <h4>Parc Longchamp</h4>
                                 </a>
                             </article>

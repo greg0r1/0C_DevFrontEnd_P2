@@ -11,18 +11,19 @@ body {
     margin: auto;
 }
 
-.hebergmt-infos__stars i,
+.lodging-infos__stars i,
 .featured__stars i {
     font-size: 10px;
     color: #0065FC;
 }
 
 .searching__filter i,
-.featured-articles__title i {
+.popular-items__title i {
     font-size: initial;
 }
 
-* {
+.popular-items,
+.lodging-articles {
     box-sizing: border-box;
 }
 
@@ -49,15 +50,16 @@ h4 {
 
 /* éléments communs de sections  */
 
-.main-articles,
-.featured-articles {
+.lodging-articles,
+.popular-items {
     padding: 20px;
     border-radius: 10px;
     background: #F2F2F2;
 }
 
-.item-product,
-.item-featured {
+.lodging-item,
+.item-featured,
+.activities-items__item {
     height: max-content;
     border: solid 5px #fff;
     margin: 10px 0;
@@ -83,12 +85,21 @@ main {
     padding: 0 20px;
 }
 
-.main-articles>div,
+.lodging-articles>div,
 .activities>div {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     align-content: space-between;
+}
+
+.lodging-item a>div:first-child,
+.activities-items__item a>div {
+    overflow: hidden;
+    height: 110px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -227,6 +238,11 @@ main {
     border-radius: 30px;
 }
 
+.searching__filter ul li a:hover {
+    background: #deebff;
+    color: #0265fc;
+}
+
 .searching__filter--round-corner {
     position: relative;
     display: flex;
@@ -255,7 +271,8 @@ main {
 
 .searching__info div {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
+    flex-shrink: 0;
 }
 
 .searching__info div i {
@@ -263,7 +280,7 @@ main {
 }
 
 .searching__info div span {
-    margin-left: 10px;
+    margin: auto 10px;
 }
 
 .searching__info--round-corner {
@@ -285,7 +302,7 @@ main {
 
 /* "Hébergements" */
 
-.articles-container {
+.lodging-items {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
@@ -293,38 +310,32 @@ main {
     justify-content: space-between;
 }
 
-.hebergmt-infos {
+.lodging-infos {
     padding: 0 10px;
     height: max-content;
+    flex-direction: column;
 }
 
-.hebergmt-infos>* {
-    margin: 10px 0;
+.lodging-infos>*,
+.lodging-infos header h4 {
+    margin: 4px 0;
 }
 
-.hebergmt-infos span {
+.lodging-infos span {
     font-weight: 600;
 }
 
-.item-product {
+.lodging-item {
     width: 30%;
 }
 
-.item-product a>div {
-    overflow: hidden;
-    height: 110px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.item-product a img {
+.lodging-item a img {
     width: 100%;
     height: auto;
 }
 
 /* "Les plus populaires" */
-.featured-container {
+.popular-items__container {
     width: 100%;
     height: 100%;
     display: flex;
@@ -333,20 +344,20 @@ main {
     justify-content: space-between;
 }
 
-.featured-articles>div {
+.popular-items>div {
     display: flex;
     flex-direction: column;
     height: 100%;
 }
 
-.featured-articles__title {
+.popular-items__title {
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-between;
     align-items: center;
 }
 
-.featured-articles__title i {
+.popular-items__title i {
     color: initial;
 }
 
@@ -355,7 +366,7 @@ main {
     height: 130px;
 }
 
-.item-featured a>div {
+.item-featured a>div:first-child {
     display: flex;
     justify-content: center;
     overflow: hidden;
@@ -407,7 +418,7 @@ article.item-featured:last-child a>div {
     width: 100%;
 }
 
-.activities article.item-product h4 {
+.activities article.activities-items__item h4 {
     padding: 0 20px;
 }
 
@@ -417,8 +428,8 @@ article.item-featured:last-child a>div {
     display: block;
 }
 
-.activities-container__1col,
-.activities-container__2cols {
+.activities-items--1col,
+.activities-items--2cols {
     display: flex;
     flex-direction: column;
     height: 400px;
@@ -426,8 +437,8 @@ article.item-featured:last-child a>div {
 }
 
 
-.activities-container__2cols article a,
-.activities-container__1col article a {
+.activities-items--2cols article a,
+.activities-items--1col article a {
     overflow: hidden;
     width: 100%;
     display: flex;
@@ -435,30 +446,30 @@ article.item-featured:last-child a>div {
     justify-content: space-between;
 }
 
-.activities-container__2cols article a div,
-.activities-container__1col article a div {
+.activities-items--2cols article a div,
+.activities-items--1col article a div {
     flex-direction: column;
     height: 100%;
     width: auto;
 }
 
-.activities-container__2cols article a img {
+.activities-items--2cols article a img {
     width: 100%;
     height: auto;
 }
 
-.activities-container__1col article a img {
+.activities-items--1col article a img {
     height: 100%;
     width: auto;
 }
 
-.activities-container {
+.activities-items {
     display: flex;
     justify-content: space-between;
 }
 
-.activities-container__1col .item-product,
-.activities-container__2cols .item-product {
+.activities-items--1col .activities-items__item,
+.activities-items--2cols .activities-items__item {
     display: flex;
     width: auto;
     border: hidden;
@@ -499,13 +510,19 @@ article.item-featured:last-child a>div {
 
     h1,
     h2,
-    h3,
-    h4 {
+    h3 {
         font-size: 1.8em;
     }
 
+    section.featured-infos h4,
+    section.activities h4,
+    section.lodging-articles h4,
+    .fa-chart-line:before,
+    .fa-map-marker-alt:before {
+        font-size: 1.4em;
+    }
+
     .searching__filter--round-corner+span,
-    .searching__info--round-corner+span,
     .fa-info::before,
     .footer__elt ul li,
     .heading__nav-links {
@@ -513,9 +530,13 @@ article.item-featured:last-child a>div {
         ;
     }
 
-    .articles-container+p a {
+    .searching__info--round-corner+span {
+        font-size: 1.2em;
+    }
+
+    .lodging-articles>div>p {
+        font-size: large;
         font-weight: 600;
-        font-size: larger;
     }
 
     p {
@@ -526,7 +547,7 @@ article.item-featured:last-child a>div {
         padding: 0;
     }
 
-    .main-articles,
+    .lodging-articles,
     .activities {
         width: auto;
         background: none;
@@ -534,13 +555,21 @@ article.item-featured:last-child a>div {
     }
 
 
-    .featured-articles {
+    .popular-items {
         width: auto;
     }
 
-    .featured-container {
+    .popular-items__container {
         flex-direction: row;
         justify-content: space-between;
+    }
+
+    .searching__input {
+        border-radius: 15px;
+    }
+
+    .searching__input span {
+        border-radius: 15px 0px 0px 15px;
     }
 
     .searching__filter ul li {
@@ -557,8 +586,8 @@ article.item-featured:last-child a>div {
 
     .searching__info--round-corner {
         border-radius: 50%;
-        width: 40px;
-        height: 35px;
+        width: 25px;
+        height: 25px;
     }
 
     a.heading__logo {
@@ -605,7 +634,7 @@ article.item-featured:last-child a>div {
     .searching__input {
         justify-content: space-between;
         border: solid .5px #F2F2F2;
-        margin: auto;
+        margin: 0;
         height: 50px;
         max-width: 400px;
     }
@@ -625,7 +654,7 @@ article.item-featured:last-child a>div {
 
     .searching__input button {
         font-size: 0;
-        border-radius: 10px;
+        border-radius: 15px;
     }
 
     .fa-map-marker-alt:before {
@@ -657,15 +686,15 @@ article.item-featured:last-child a>div {
         padding: 10px;
     }
 
-    .featured-articles {
+    .popular-items {
         order: 0;
     }
 
-    .featured-container {
+    .popular-items__container {
         padding: unset;
     }
 
-    .main-articles {
+    .lodging-articles {
         order: 3
     }
 
@@ -677,37 +706,37 @@ article.item-featured:last-child a>div {
         width: 100%;
     }
 
-    article.item-product {
+    article.lodging-item {
         width: unset;
     }
 
-    article.item-product {
+    article.lodging-item {
         width: unset;
     }
 
-    .activities-container {
+    .activities-items {
         flex-direction: column;
     }
 
-    .activities-container__1col article a img,
-    .activities-container__2cols article a img {
+    .activities-items--1col article a img,
+    .activities-items--2cols article a img {
         width: 100%;
         height: auto;
     }
 
-    .activities-container__1col .item-product,
-    .activities-container__2cols .item-product {
+    .activities-items--1col .activities-items__item,
+    .activities-items--2cols .activities-items__item {
         height: 200px;
         ;
     }
 
-    .activities-container__1col,
-    .activities-container__2cols {
+    .activities-items--1col,
+    .activities-items--2cols {
         width: unset;
     }
 
-    .activities-container__1col,
-    .activities-container__2cols {
+    .activities-items--1col,
+    .activities-items--2cols {
         height: unset;
     }
 
@@ -715,20 +744,24 @@ article.item-featured:last-child a>div {
         flex-direction: column;
     }
 
+    .heading {
+        padding: unset;
+    }
+
 }
 
 @media only screen and (min-width: 600px) and (max-width: 1024px) {
 
-    .main-articles {
+    .lodging-articles {
         width: auto;
     }
 
-    .featured-articles {
+    .popular-items {
         width: auto;
         margin: 10px auto;
     }
 
-    .featured-articles>div {
+    .popular-items>div {
         height: 100%;
         flex-wrap: nowrap;
     }
@@ -742,22 +775,22 @@ article.item-featured:last-child a>div {
         margin-bottom: 20px;
     }
 
-    .activities-container {
+    .activities-items {
         flex-wrap: wrap;
     }
 
-    .activities-container__1col,
-    .activities-container__2cols {
+    .activities-items--1col,
+    .activities-items--2cols {
         width: 48%;
     }
 
-    .activities-container__1col:last-child {
+    .activities-items--1col:nth-child(3) {
         order: 4;
     }
 }
 
 @media only screen and (min-width: 1024px) {
-    .main-articles {
+    .lodging-articles {
         width: 70%;
     }
 
@@ -765,7 +798,7 @@ article.item-featured:last-child a>div {
         min-width: 200px;
     }
 
-    .featured-articles {
+    .popular-items {
         width: 27%;
     }
 
@@ -773,7 +806,7 @@ article.item-featured:last-child a>div {
         min-width: 100%;
     }
 
-    .featured-container {
+    .popular-items__container {
         width: 100%;
     }
 
@@ -781,7 +814,7 @@ article.item-featured:last-child a>div {
         width: 100%;
     }
 
-    .featured-container {
+    .popular-items__container {
         flex-direction: column;
     }
 
