@@ -29,20 +29,21 @@
             </ul>
         </header>
 
-        <section id="main">
+        <div id="main">
             <!-- recherche + filtre -->
             <section id="search" class="search">
+                <div class="searching__title" for="search-elt">
+                    <h2>Trouvez votre hébergement pour des vacances de rêves</h2>
+                    <p>En plein centre-ville ou en pleine nature</p>
+                </div>
                 <!-- Search bar -->
                 <form class="searching" action="https://greg0r1.github.io/0C_DevFrontEnd_P2/" method="get">
-                    <label class="searching__title" for="search-elt">
-                        <h2>Trouvez votre hébergement pour des vacances de rêves</h2>
-                        <p>En plein centre-ville ou en pleine nature</p>
-                    </label>
                     <div class="searching__input">
                         <span>
                             <i class="fas fa-map-marker-alt"></i>
                         </span>
-                        <input type="search" name="search-elt" class="search-elt" placeholder="Marseille, France" />
+                        <input type="search" name="search-elt" id="search-elt" class="search-elt"
+                            placeholder="Marseille, France" />
                         <button type="submit">Rechercher</button>
                     </div>
                     <div class="searching__filter">
@@ -499,7 +500,7 @@
                     </div>
                 </div>
             </section>
-        </section>
+        </div>
 
         <footer class="footer">
             <div class="footer-container">
