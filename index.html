@@ -34,10 +34,10 @@
             <section id="search" class="search">
                 <!-- Search bar -->
                 <form class="searching" action="https://greg0r1.github.io/0C_DevFrontEnd_P2/" method="get">
-                    <labet class="searching__title" for="search-elt">
+                    <label class="searching__title" for="search-elt">
                         <h2>Trouvez votre hébergement pour des vacances de rêves</h2>
                         <p>En plein centre-ville ou en pleine nature</p>
-                    </labet>
+                    </label>
                     <div class="searching__input">
                         <span>
                             <i class="fas fa-map-marker-alt"></i>
@@ -98,7 +98,7 @@
                 <div>
                     <h3>Hébergements à Marseille</h3>
                     <!-- container des articles -->
-                    <section class="lodging-items">
+                    <div class="lodging-items">
                         <article class="lodging-item" itemscope="itemscope" itemtype="https://schema.org/Product">
                             <a href="#">
                                 <div>
@@ -276,7 +276,7 @@
                                             content="EUR">€</span>
                                     </p>
                                     <footer>
-                                        <divitemprop="starRating" itemscope="itemscope"
+                                        <div itemprop="starRating" itemscope="itemscope"
                                             itemtype="https://schema.org/Rating">
                                             <meta itemprop="ratingValue" content="4" />
                                             <div class="lodging-infos__stars">
@@ -286,11 +286,12 @@
                                                 <i class="fas fa-star"></i>
                                                 <i class="fas fa-star"></i>
                                             </div>
+                                        </div>
                                     </footer>
                                 </div>
                             </a>
                         </article>
-                    </section>
+                    </div>
                     <p>
                         <a href="#activities">Afficher plus</a>
                     </p>
@@ -304,7 +305,7 @@
                         <h3>Les plus populaires</h3>
                         <i class="fas fa-chart-line"></i>
                     </div>
-                    <section class="popular-items__container">
+                    <div class="popular-items__container">
                         <article class="item-featured" itemscope="itemscope" itemtype="https://schema.org/Product">
                             <a href="#">
                                 <div>
@@ -412,7 +413,7 @@
                                 </div>
                             </a>
                         </article>
-                    </section>
+                    </div>
                 </div>
             </aside>
 
@@ -420,7 +421,7 @@
             <section id="activities" class="activities">
                 <div>
                     <h3>Activités à Marseille</h3>
-                    <section class="activities-items">
+                    <div class="activities-items">
                         <div class="activities-items--1col">
                             <article class="activities-items__item" itemscope="itemscope"
                                 itemtype="https://schema.org/Product">
@@ -495,7 +496,7 @@
                                 </a>
                             </article>
                         </div>
-                    </section>
+                    </div>
                 </div>
             </section>
         </section>
