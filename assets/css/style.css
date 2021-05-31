@@ -11,10 +11,13 @@ body {
     margin: auto;
 }
 
-.lodging-infos__stars i,
-.featured__stars i {
+.fa-star {
     font-size: 10px;
     color: #0065FC;
+}
+
+.fa-star--white {
+    color: #f2f2f2;
 }
 
 .searching__filter i,
@@ -334,6 +337,9 @@ main {
     width: 100%;
     height: auto;
 }
+
+
+
 
 /* "Les plus populaires" */
 .popular-items__container {
